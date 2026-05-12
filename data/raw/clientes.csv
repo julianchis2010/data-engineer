@@ -1,0 +1,122 @@
+﻿cliente_id,tipo_documento,numero_documento,nombres,apellidos,email,telefono,fecha_registro,estado_cliente,ciudad,segmento,fecha_nacimiento,ingresos_mensuales
+C0001,CC,46913810,Jorge,Luna,jorge.luna@email.com,3223756669,2024-10-06,Activo,Ibague,Pyme,1971-06-05,2799828
+C0002,NIT,862454433,Comercial Andina SAS,,comercialandinasas.contacto@email.com,3836687537,2024-10-06,Bloqueado,Barranquilla,Pyme,,21572475
+C0003,CC,31429110,Karen,Mejia,karen.mejia@email.com,3547295260,2024-03-20,Inactivo,Pereira,Retail,1974-02-28,14548244
+C0004,NIT,892329911,Inversiones Prisma SAS,,inversionesprismasas.contacto@email.com,3071662963,2024-10-01,Activo,Cartagena,Retail,,20323409
+C0005,CC,87490893,Diana,Perez,diana.perez@email.com,3116150444,2024-04-26,Suspendido,Medellin,Retail,1974-07-13,14554919
+C0006,CC,31831063,Ricardo,Navas,ricardo.navas@email.com,3399949389,2024-05-16,Activo,Ibague,Corporativo,1977-09-04,19722760
+C0007,CC,72043515,Monica,Herrera,monica.herrera@email.com,3839476249,2024-06-15,Activo,Barranquilla,Retail,1984-02-25,15260856
+C0008,CC,,Lucia,Perez,lucia.perez@email.com,3538538251,2024-09-12,Bloqueado,Manizales,Retail,1981-11-18,6485216
+C0009,CC,88461803,Oscar,Moreno,oscar.moreno@email.com,3658586340,2024-04-22,Inactivo,Cucuta,Pyme,1974-01-29,3380963
+C0010,CC,94214382,Felipe,Vega,felipe.vega@email.com,3690048665,2024-02-02,Bloqueado,Cartagena,Corporativo,1990-12-30,19554131
+C0011,CC,25374874,Tomas,Leon,tomas.leon@email.com,3496028436,2024-06-23,Activo,Bucaramanga,Pyme,1977-02-04,17024441
+C0012,NIT,993835111,Inversiones Prisma SAS,,inversionesprismasas.contacto@email.com,3833978249,2024-09-16,Activo,Bucaramanga,Corporativo,,18834339
+C0013,CC,60185867,Daniela,Castro,daniela.castro@email.com,3881182864,2024-01-01,Pendiente,Pereira,Pyme,1970-11-16,5553657
+C0014,CC,42138745,Carlos,Luna,carlos.luna@email.com,3920570592,2024/03/20,Bloqueado,Medellin,Corporativo,1975-08-23,6108102
+C0015,CC,45575298,Valentina,Arias,valentina.arias@email.com,3638427073,2024-10-03,Inactivo,Bucaramanga,Pyme,2000-02-17,23606289
+C0016,CE,26240908,Jorge,Luna,jorge.luna@email.com,3155377076,2024-01-11,Pendiente,Cucuta,Retail,1996-05-25,9189269
+C0017,NIT,990009606,Comercial Andina SAS,,comercialandinasas.contacto@email.com,3319046318,2024-01-17,Suspendido,Medellin,Corporativo,,9786110
+C0018,CE,38754377,Sergio,Ruiz,sergio.ruiz@email.com,3987337818,2024-08-30,Inactivo,Manizales,Pyme,1978-07-17,4965048
+C0019,NIT,915709421,Inversiones Prisma SAS,,inversionesprismasas.contacto@email.com,3665177213,2024-08-27,Activo,Medellin,Retail,,15309728
+C0020,CC,43374088,Diana,Torres,diana.torres@email.com,3870211891,2024-03-12,Bloqueado,Cali,Pyme,1990-10-02,10182113
+C0021,CC,69476001,Mauricio,Leon,mauricio.leon@email.com,3116789850,2024-10-03,Activo,Medellin,Retail,1977-06-17,15436992
+C0022,CC,63826716,Lucia,Patino,lucia.patino@email.com,3260864911,2024-01-02,Bloqueado,Bucaramanga,Pyme,1982-10-18,15993775
+C0023,CE,30776478,Diana,Cardenas,diana.cardenas@email.com,3317849494,2024-10-23,Pendiente,Bogota,Corporativo,1984-01-26,-2500000
+C0024,NIT,927986942,Servicios Delta SAS,,serviciosdeltasas.contacto@email.com,3078159587,2024-02-11,Inactivo,Medellin,Corporativo,,4080388
+C0025,CC,64193837,Andres,Moreno,andres.moreno@email.com,3387701200,2024-01-21,Pendiente,Medellin,Pyme,1999-06-28,21384792
+C0026,CC,44999379,Diana,Beltran,diana.beltran@email.com,3542035886,2024-05-15,Bloqueado,Cali,Corporativo,1998-12-15,11866231
+C0027,CC,11250299,Camila,Arias,camila.arias@email.com,3923419256,2024-02-07,Pendiente,Barranquilla,Corporativo,1981-11-24,6244504
+C0028,CC,42787299,Ricardo,Cardenas,ricardo.cardenas@email.com,3268812137,2024-10-05,Suspendido,Ibague,Corporativo,1993-09-23,2062499
+C0029,CC,99038526,Andres,Ruiz,andres.ruiz@email.com,3425492573,2024-02-24,Pendiente,Cali,Pyme,1982-08-22,22094721
+C0030,CC,37326368,Tomas,Soto,tomas.soto@email.com,3477834855,2024-09-07,Suspendido,Bogota,Retail,1998-06-15,16012844
+C0031,CC,10475894,Sandra,Acosta,sandra.acosta@email.com,3295511909,2024-05-14,Inactivo,Manizales,Corporativo,2001-08-27,16150791
+C0032,CC,20099059,Lucia,Perez,lucia.perez@email.com,3283227889,2024-01-19,Suspendido,Ibague,Corporativo,1976-08-23,16221249
+C0033,CC,58942697,Lucia,Vega,lucia.vega@email.com,3058024342,2024-04-17,Inactivo,Medellin,Pyme,1995-02-12,15435762
+C0034,CC,41774346,Alejandro,Castro,alejandro.castro@email.com,3265337219,2024-01-13,Inactivo,Pereira,Pyme,2000-01-19,10127110
+C0035,CC,61343880,Alejandro,Patino,alejandro.patino@email.com,3739854548,2024-04-12,Bloqueado,Pereira,Pyme,1980-03-17,9280073
+C0036,NIT,851842883,Grupo Norte SAS,,gruponortesas.contacto@email.com,3547393469,2024-02-05,activo,Pereira,Corporativo,,18892818
+C0037,CC,13704481,Andres,Herrera,andres.herrera@email.com,3287925434,2024-05-15,Activo,Medellin,Corporativo,1989-06-29,13399334
+C0038,CC,68571795,Esteban,Ortega,esteban.ortega@email.com,3161700055,2024-10-22,Inactivo,Bucaramanga,Retail,2001-10-17,16431662
+C0039,NIT,944539606,Servicios Delta SAS,,serviciosdeltasas.contacto@email.com,3567887757,2024-02-05,Suspendido,Ibague,Pyme,,24059589
+C0040,CC,78064830,Miguel,Beltran,miguel.beltran@email.com,3653779528,2024-07-25,Suspendido,Cucuta,Retail,1978-08-10,15907837
+C0041,CE,33357554,Esteban,Moreno,esteban.moreno@email.com,3464502486,2024-10-07,Activo,Bucaramanga,Pyme,1979-06-06,16224652
+C0042,CC,72409658,Camila,Vargas,camila.vargas@email.com,3378608612,2024-08-30,Inactivo,Medellin,Pyme,1993-02-14,24075238
+C0043,CC,22534217,Elena,Acosta,elena.acosta@email.com,3351663795,2024-04-25,Inactivo,Cali,Retail,1972-01-28,10015552
+C0044,CC,71124923,Oscar,Soto,oscar.soto@email.com,3936096655,2024-07-15,Bloqueado,Cartagena,Retail,1976-08-14,23813653
+C0045,CC,67062156,Jorge,Castro,jorge.castro@email.com,3872350830,2024-01-26,Pendiente,Barranquilla,Retail,1990-06-23,6274117
+C0046,CC,69401199,Esteban,Quiroz,esteban.quiroz@email.com,3867276174,2024-10-07,Bloqueado,Cali,Corporativo,1991-04-18,16901835
+C0047,CC,95585469,Natalia,Acosta,natalia.acosta@email.com,3875041510,2024-05-02,Suspendido,Manizales,Retail,2002-01-03,11387445
+C0048,CC,52910691,Lucia,Leon,lucia.leon@email.com,3128572252,2024-03-18,Inactivo,Cartagena,Corporativo,1976-11-08,8979067
+C0049,NIT,909414123,Inversiones Prisma SAS,,correo_sin_arroba.com,3872535301,2024-07-31,Activo,Barranquilla,Pyme,,14868673
+C0050,CC,87267850,Monica,Franco,monica.franco@email.com,3057212267,2024-06-01,Bloqueado,Cartagena,Corporativo,2003-07-14,20125159
+C0051,CC,75529051,Jorge,Herrera,jorge.herrera@email.com,3675181765,2024-01-15,Bloqueado,Pereira,Corporativo,2000-06-19,15366616
+C0052,CE,27129912,Esteban,Leon,esteban.leon@email.com,3062884503,2024-10-30,Pendiente,Bogota,Retail,1998-10-31,16181858
+C0053,CE,34391257,Carlos,Herrera,carlos.herrera@email.com,3653936531,2024-04-18,Bloqueado,Pereira,Pyme,1987-01-03,11136742
+C0054,CE,43859311,Elena,Gomez,elena.gomez@email.com,3712601580,2024-10-03,Activo,Pereira,Retail,1999-03-01,4102450
+C0055,CC,14164775,Jorge,Torres,jorge.torres@email.com,3093394260,2024-03-19,Inactivo,Cali,Pyme,2000-01-12,5638272
+C0056,CC,72415804,Karen,Herrera,karen.herrera@email.com,3532520277,2024-02-28,Inactivo,Bucaramanga,Retail,1995-12-17,2661624
+C0057,CE,63238057,Karen,Torres,karen.torres@email.com,3189470029,2024-05-04,Activo,Bucaramanga,Corporativo,1996-12-07,5861933
+C0058,CC,56600900,Sergio,Mejia,sergio.mejia@email.com,3519255216,2024-09-16,Suspendido,Bogota,Pyme,1991-12-28,5341296
+C0059,CC,95306788,Lucia,Quiroz,lucia.quiroz@email.com,3730534124,2024-08-10,Inactivo,Cucuta,Corporativo,1982-02-12,22466589
+C0060,CE,72394301,Oscar,Quiroz,oscar.quiroz@email.com,3946023439,2024-06-14,Inactivo,Medellin,Pyme,1990-03-22,9982699
+C0061,CE,55150390,Laura,Franco,laura.franco@email.com,3534406132,2024-09-06,Inactivo,Pereira,Pyme,1985-04-08,11183781
+C0062,CC,84597009,Laura,Ortega,laura.ortega@email.com,3321490777,2024-05-03,EN REVISION,Manizales,Corporativo,1980-10-12,24973004
+C0063,CE,70152969,Mauricio,Mendez,mauricio.mendez@email.com,3149491631,2024-04-23,Bloqueado,Barranquilla,Pyme,1999-10-14,21313767
+C0064,CC,67110154,Hector,Leon,hector.leon@email.com,3557219209,2024-08-20,Suspendido,Bucaramanga,Pyme,1980-05-05,5848539
+C0065,CC,26046365,Hector,Leon,hector.leon@email.com,3235708194,2024-04-20,Bloqueado,Bucaramanga,Corporativo,1996-06-12,19403892
+C0066,CC,36054020,Miguel,Luna,miguel.luna@email.com,3534084236,2024-06-03,Activo,Cucuta,Retail,1982-04-22,3327253
+C0067,CC,26948946,Andrea,Acosta,andrea.acosta@email.com,3723769080,2024-01-07,Pendiente,Bucaramanga,Pyme,1991-06-23,16579680
+C0068,CC,43887075,Alejandro,Franco,alejandro.franco@email.com,3118770247,2024-07-24,Bloqueado,Medellin,Corporativo,1998-03-27,24833474
+C0069,NIT,840049920,Inversiones Prisma SAS,,inversionesprismasas.contacto@email.com,3143311626,2024-03-01,Pendiente,Cartagena,Corporativo,,21802697
+C0070,CC,80138498,Monica,Vargas,monica.vargas@email.com,3749910061,2024-10-28,Bloqueado,Bucaramanga,Corporativo,1997-11-09,3820993
+C0071,CC,37888820,Andrea,Torres,andrea.torres@email.com,3498641164,2024-02-11,Inactivo,Barranquilla,Retail,1994-10-05,4318759
+C0072,CE,70465583,Karen,Arias,karen.arias@email.com,3749092160,2024-01-17,Inactivo,Bucaramanga,Corporativo,1982-09-07,17034763
+C0073,NIT,862659224,Inversiones Prisma SAS,,inversionesprismasas.contacto@email.com,3998742485,2024-04-11,Bloqueado,Medellin,Corporativo,,9343353
+C0074,CC,29090631,Maria,Patino,maria.patino@email.com,3251286958,2024-10-18,Suspendido,Manizales,Retail,1991-01-10,24908198
+C0075,CE,46540265,Valentina,Leon,valentina.leon@email.com,,2024-02-11,Pendiente,Bogota,Pyme,2002-12-13,12615317
+C0076,CC,22257687,Jorge,Beltran,jorge.beltran@email.com,3988802305,2024-01-11,Suspendido,Ibague,Retail,2003-12-04,7678425
+C0077,CE,47333543,Felipe,Moreno,felipe.moreno@email.com,3695199362,2024-09-08,Activo,Manizales,Pyme,1988-04-26,12983973
+C0078,CC,31585546,Sandra,Mejia,sandra.mejia@email.com,3748683937,2024-07-24,Pendiente,Bogota,Pyme,1973-12-13,12353444
+C0079,CC,64247457,Alejandro,Ortega,alejandro.ortega@email.com,3098269682,2024-10-04,Bloqueado,Cartagena,Retail,1978-06-01,19195939
+C0080,CE,93940940,Camila,Acosta,camila.acosta@email.com,3037321124,2024-05-16,Pendiente,Cali,Pyme,1989-08-27,18064229
+C0081,CC,31257157,Miguel,Leon,miguel.leon@email.com,3084121929,2024-07-27,Activo,Barranquilla,Retail,1990-09-13,5741509
+C0082,CC,76890827,Sebastian,Perez,sebastian.perez@email.com,3478299645,2024-05-19,Bloqueado,Manizales,Pyme,1980-12-07,17127210
+C0083,CE,35583290,Sebastian,Arias,sebastian.arias@email.com,3828321839,2024-02-05,Suspendido,Cartagena,Pyme,1992-10-10,10764826
+C0084,CC,50071487,Elena,Moreno,elena.moreno@email.com,3998575748,2024-09-07,Inactivo,Manizales,Corporativo,1991-09-23,13380437
+C0085,CE,71115319,Sebastian,Pena,sebastian.pena@email.com,3342051937,2024-10-19,Bloqueado,Barranquilla,Pyme,1971-12-17,12476225
+C0086,CE,61818612,Tomas,Vega,tomas.vega@email.com,3276481885,2024-01-19,Inactivo,Cucuta,Corporativo,1984-11-22,5167677
+C0087,CE,23383077,Valentina,Vargas,valentina.vargas@email.com,3029348212,2024-07-28,Inactivo,Medellin,Pyme,1981-11-21,13160229
+C0088,CE,97219599,Maria,Pena,maria.pena@email.com,3861003997,2024-06-11,Bloqueado,Cucuta,Retail,1997-09-12,4095819
+C0089,CC,40532691,Hector,Gomez,hector.gomez@email.com,3623212812,2024-02-21,Bloqueado,Cali,Corporativo,1983-06-08,2771308
+C0090,NIT,815064390,Inversiones Prisma SAS,,inversionesprismasas.contacto@email.com,3560310319,2024-08-08,Inactivo,Barranquilla,Corporativo,,15626162
+C0091,CC,32814819,Felipe,Gomez,felipe.gomez@email.com,3961344226,2024-05-03,Bloqueado,Ibague,Retail,1980-06-01,17273623
+C0092,CE,44269370,Tomas,Mendez,tomas.mendez@email.com,3748605268,2024-10-06,Inactivo,Medellin,Pyme,1985-07-02,21515634
+C0093,CE,43567615,Camila,Cardenas,camila.cardenas@email.com,3361632653,2024-09-04,Activo,Barranquilla,Pyme,1995-08-28,13844670
+C0094,CC,12944682,Elena,Beltran,elena.beltran@email.com,3646840133,2024-01-05,Pendiente,Bogota,Corporativo,2003-06-05,18467401
+C0095,CC,40885967,Esteban,Vega,esteban.vega@email.com,3539394291,2024-04-07,Pendiente,Bucaramanga,Corporativo,2003-11-23,23918462
+C0096,CC,94322033,Andres,Soto,andres.soto@email.com,3051464269,2024-08-13,Activo,Ibague,Pyme,2002-11-07,6209448
+C0097,NIT,879218109,Inversiones Prisma SAS,,inversionesprismasas.contacto@email.com,3633574011,2024-04-12,Inactivo,Cucuta,Pyme,,19612449
+C0098,CC,32084778,Natalia,Quiroz,natalia.quiroz@email.com,3749613214,2024-06-22,Activo,Manizales,Retail,1976-04-25,9370372
+C0099,CE,84801233,Ricardo,Gomez,ricardo.gomez@email.com,3611868130,2024-05-15,Pendiente,Medellin,Pyme,1986-07-14,24376374
+C0100,CC,88458327,Monica,Quiroz,monica.quiroz@email.com,3524541967,2024-04-29,Bloqueado,Bogota,Corporativo,1995-03-09,12806064
+C0101,CC,96926431,Maria,Soto,maria.soto@email.com,3750559278,2024-07-28,Activo,Cali,Retail,1971-09-02,12012780
+C0102,CC,23044889,Jorge,Leon,jorge.leon@email.com,3262163160,2024-08-20,Suspendido,Cucuta,Pyme,1996-05-06,6984928
+C0103,CC,75679047,Esteban,Mejia,esteban.mejia@email.com,3414391105,2024-07-08,Inactivo,Manizales,Pyme,1980-08-04,13969724
+C0104,NIT,984060894,Inversiones Prisma SAS,,inversionesprismasas.contacto@email.com,3896547189,2024-07-02,Activo,Cartagena,Pyme,,8168918
+C0105,CE,22304198,Tomas,Torres,tomas.torres@email.com,3912866549,2024-01-26,Suspendido,Barranquilla,Retail,1995-04-30,8685556
+C0106,NIT,948769020,Servicios Delta SAS,,serviciosdeltasas.contacto@email.com,3938984499,2024-04-29,Suspendido,Cali,Corporativo,,1895145
+C0107,CC,27447248,Sergio,Herrera,sergio.herrera@email.com,3224754064,2024-01-14,Inactivo,Bogota,Pyme,1980-09-03,21558625
+C0108,CC,45617024,Carlos,Ruiz,carlos.ruiz@email.com,3680610004,2024-02-28,Activo,Manizales,Pyme,1986-03-29,19021408
+C0109,CE,77624084,Jorge,Arias,jorge.arias@email.com,3098436473,2024-09-23,Suspendido,Manizales,Corporativo,1971-05-26,3840961
+C0110,CE,67213476,Tomas,Rojas,tomas.rojas@email.com,3769533928,2024-02-07,Activo,Pereira,Corporativo,1976-08-27,4003930
+C0111,CC,61124122,Esteban,Ortega,esteban.ortega@email.com,3470896652,2024-09-15,Pendiente,Cartagena,Retail,2001-06-24,5639099
+C0112,CC,67723010,Camila,Luna,camila.luna@email.com,3655490631,2024-08-20,Bloqueado,Cartagena,Corporativo,1974-04-07,12287382
+C0113,CC,60237832,Paula,Beltran,paula.beltran@email.com,3719010480,2024-02-16,Activo,Medellin,Pyme,1974-05-02,14303953
+C0114,CC,88714010,Sergio,Leon,sergio.leon@email.com,3599927658,2024-03-03,Bloqueado,Pereira,Corporativo,2003-08-28,15991405
+C0115,CC,48604965,Esteban,Cardenas,esteban.cardenas@email.com,3523905032,2024-10-22,Pendiente,Barranquilla,Retail,1999-06-17,17979591
+C0116,CC,56991504,Alejandro,Leon,alejandro.leon@email.com,3525419645,2024-05-22,Pendiente,Barranquilla,Pyme,1995-03-01,22661589
+C0117,CC,91737913,Sebastian,Beltran,sebastian.beltran@email.com,3413886030,2024-04-02,Suspendido,Bucaramanga,Pyme,1985-09-30,2004876
+C0118,CC,86010330,Tomas,Salazar,tomas.salazar@email.com,3129042093,2024-01-16,Activo,Cucuta,Retail,1986-11-16,15887240
+C0119,CC,59667685,Miguel,Suarez,miguel.suarez@email.com,3586181117,2024-02-13,Activo,Cali,Retail,2003-11-04,22531209
+C0120,NIT,821899374,Inversiones Prisma SAS,,inversionesprismasas.contacto@email.com,3798843907,2024-08-05,Bloqueado,Ibague,Pyme,,15697700
+C0121,CC,46913810,Jorge,Luna,duplicado@email.com,3223756669,2024-11-01,Activo,Ibague,Retail,1971-06-05,2799828
