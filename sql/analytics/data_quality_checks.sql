@@ -31,3 +31,17 @@ WHERE c.credito_id IS NULL;
 SELECT *
 FROM staging.pagos
 WHERE fecha_pago IS NULL;
+
+
+-- CREDITOS CON MONTO INVALIDO
+
+SELECT *
+FROM staging.creditos
+WHERE monto_aprobado <= 0;
+
+
+-- PAGOS CON MONTO INVALIDO
+
+SELECT *
+FROM staging.pagos
+WHERE monto_pago <= 0;
