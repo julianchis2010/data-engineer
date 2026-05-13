@@ -2,21 +2,25 @@
 
 ## Overview
 
-This project implements an end-to-end Data Engineering pipeline for processing financial data related to customers, loans, and payments.
+This project implements an end-to-end Data Engineering solution for processing financial data related to customers, loans, and payments.
+
+The pipeline ingests CSV files, performs data transformations and validations, loads the information into a PostgreSQL staging layer, and builds a dimensional Data Warehouse model optimized for analytical workloads.
 
 The solution includes:
 
 - CSV ingestion
-- Data cleaning and transformation
+- Data transformation and cleansing
 - PostgreSQL staging layer
-- Dimensional Data Warehouse model
+- Dimensional Data Warehouse modeling
 - Analytical SQL views
 - Business-oriented analytical queries
+- Data quality validations
 - Dockerized local environment
+- Modular ETL architecture
 
 ---
 
-# Architecture
+# Solution Architecture
 
 CSV Files  
 ↓  
@@ -26,7 +30,13 @@ PostgreSQL Staging Layer
 ↓  
 Dimensional Data Warehouse  
 ↓  
-Analytical Views & Queries
+Analytical Views & Business Queries
+
+---
+
+# Architecture Diagram
+
+![Architecture](docs/architecture.png)
 
 ---
 
@@ -50,6 +60,11 @@ data-engineer/
 ├── data/
 │   └── raw/
 │
+├── docs/
+│   ├── architecture.png
+│   ├── star_schema.png
+│   └── screenshots/
+│
 ├── sql/
 │   ├── ddl/
 │   │   ├── staging.sql
@@ -57,7 +72,8 @@ data-engineer/
 │   │   └── views.sql
 │   │
 │   └── analytics/
-│       └── business_queries.sql
+│       ├── business_queries.sql
+│       └── data_quality_checks.sql
 │
 ├── src/
 │   ├── extract/
@@ -75,7 +91,7 @@ data-engineer/
 
 # Data Sources
 
-The project processes three datasets:
+The solution processes three datasets:
 
 - Customers
 - Loans
@@ -91,22 +107,36 @@ CSV files are extracted using Pandas.
 
 ## Transform
 
-Transformation steps include:
+Transformation and cleansing steps include:
 
 - Column normalization
 - Invalid date handling
-- Basic data cleaning
+- Data type corrections
 - Null filtering
+- Basic data validation
 
 ## Load
 
-The cleaned datasets are loaded into PostgreSQL staging tables.
+Cleaned datasets are loaded into PostgreSQL staging tables before being transformed into dimensional models.
+
+---
+
+# Staging Layer
+
+The staging layer stores raw and partially cleansed data from source systems.
+
+Implemented staging tables:
+
+- staging.clientes
+- staging.creditos
+- staging.pagos
+- staging.error_records
 
 ---
 
 # Data Warehouse Model
 
-The solution implements a star schema model.
+The solution implements a dimensional star schema optimized for analytical querying.
 
 ## Dimensions
 
@@ -120,9 +150,15 @@ The solution implements a star schema model.
 
 ---
 
+# Star Schema Diagram
+
+![Star Schema](docs/star_schema.png)
+
+---
+
 # Analytical Views
 
-The following views were implemented:
+The following analytical views were implemented:
 
 - vw_cartera_total
 - vw_pagos_metodo
@@ -141,6 +177,19 @@ The project includes analytical SQL queries such as:
 - Top customers by approved amount
 - Portfolio distribution by city
 - Payment status distribution
+
+---
+
+# Data Quality Checks
+
+Implemented validations include:
+
+- Duplicate customer detection
+- Loans without valid customers
+- Payments without valid loans
+- Invalid date validation
+
+The project intentionally preserves raw inconsistencies at the staging layer while enforcing cleaner dimensional relationships in the Data Warehouse model.
 
 ---
 
@@ -187,7 +236,31 @@ python -m src.main
 - Staging layer implementation
 - Star schema implementation
 - Analytical SQL layer
+- Data quality validations
 - Git version control
+
+---
+
+# Future Improvements
+
+Potential enhancements include:
+
+- Airflow orchestration
+- Incremental data loads
+- Logging framework
+- Unit testing
+- CI/CD integration
+- Cloud migration architecture
+
+---
+
+# Evidence
+
+Project execution screenshots and supporting documentation are stored in:
+
+```bash
+docs/screenshots/
+```
 
 ---
 
