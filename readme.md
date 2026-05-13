@@ -4,23 +4,22 @@
 
 This project implements an end-to-end Data Engineering solution for processing financial data related to customers, loans, and payments.
 
-The pipeline ingests CSV files, performs data transformations and validations, loads the information into a PostgreSQL staging layer, and builds a dimensional Data Warehouse model optimized for analytical workloads.
-
 The solution includes:
 
 - CSV ingestion
-- Data transformation and cleansing
+- Data quality validation
+- ETL pipeline in Python
 - PostgreSQL staging layer
-- Dimensional Data Warehouse modeling
+- Dimensional Data Warehouse
 - Analytical SQL views
-- Business-oriented analytical queries
-- Data quality validations
+- Business KPI documentation
+- Power BI semantic model
+- Interactive dashboard visualization
 - Dockerized local environment
-- Modular ETL architecture
 
 ---
 
-# Solution Architecture
+# Architecture
 
 CSV Files  
 ↓  
@@ -30,13 +29,21 @@ PostgreSQL Staging Layer
 ↓  
 Dimensional Data Warehouse  
 ↓  
-Analytical Views & Business Queries
+Analytical Views & Queries  
+↓  
+Power BI Dashboard
 
 ---
 
-# Architecture Diagram
+# Solution Architecture Diagram
 
-![Architecture](docs/architecture.png)
+![Architecture](docs/images/architecture.png)
+
+---
+
+# Star Schema Model
+
+![Star Schema](docs/images/star_schema.png)
 
 ---
 
@@ -47,6 +54,7 @@ Analytical Views & Business Queries
 - PostgreSQL
 - SQLAlchemy
 - Docker
+- Power BI Desktop
 - DBeaver
 - Git & GitHub
 
@@ -61,9 +69,18 @@ data-engineer/
 │   └── raw/
 │
 ├── docs/
-│   ├── architecture.png
-│   ├── star_schema.png
-│   └── screenshots/
+│   ├── images/
+│   │   ├── architecture.png
+│   │   ├── star_schema.png
+│   │   ├── dashboard.png
+│   │   └── data_model.png
+│   │
+│   ├── powerbi/
+│   │   └── dashboard.pbix
+│   │
+│   ├── data_dictionary.md
+│   ├── kpis.md
+│   └── powerbi_semantic_model.md
 │
 ├── sql/
 │   ├── ddl/
@@ -91,7 +108,7 @@ data-engineer/
 
 # Data Sources
 
-The solution processes three datasets:
+The project processes three datasets:
 
 - Customers
 - Loans
@@ -105,27 +122,29 @@ The solution processes three datasets:
 
 CSV files are extracted using Pandas.
 
+---
+
 ## Transform
 
-Transformation and cleansing steps include:
+Transformation steps include:
 
 - Column normalization
 - Invalid date handling
-- Data type corrections
 - Null filtering
-- Basic data validation
+- Invalid value validation
+- Basic data cleaning
+
+---
 
 ## Load
 
-Cleaned datasets are loaded into PostgreSQL staging tables before being transformed into dimensional models.
+The cleaned datasets are loaded into PostgreSQL staging tables.
 
 ---
 
 # Staging Layer
 
-The staging layer stores raw and partially cleansed data from source systems.
-
-Implemented staging tables:
+The staging layer contains the following tables:
 
 - staging.clientes
 - staging.creditos
@@ -136,23 +155,44 @@ Implemented staging tables:
 
 # Data Warehouse Model
 
-The solution implements a dimensional star schema optimized for analytical querying.
-
-## Dimensions
-
-- dim_cliente
-- dim_producto
-
-## Fact Tables
-
-- fact_creditos
-- fact_pagos
+The solution implements a dimensional star schema model.
 
 ---
 
-# Star Schema Diagram
+## Dimensions
 
-![Star Schema](docs/star_schema.png)
+### dim_cliente
+
+Stores customer descriptive attributes.
+
+### dim_producto
+
+Stores product-related information.
+
+---
+
+## Fact Tables
+
+### fact_creditos
+
+Stores loan transactional metrics.
+
+### fact_pagos
+
+Stores payment transactional metrics.
+
+---
+
+# Data Quality Rules
+
+The following validations were implemented:
+
+- Invalid dates detection
+- Duplicate records validation
+- Loans without customers
+- Payments without loans
+- Invalid payment amounts
+- Invalid approved loan amounts
 
 ---
 
@@ -177,19 +217,44 @@ The project includes analytical SQL queries such as:
 - Top customers by approved amount
 - Portfolio distribution by city
 - Payment status distribution
+- Approved loan analysis
+- Active customer analysis
 
 ---
 
-# Data Quality Checks
+# KPI Documentation
 
-Implemented validations include:
+Business KPIs documented include:
 
-- Duplicate customer detection
-- Loans without valid customers
-- Payments without valid loans
-- Invalid date validation
+- Total Portfolio
+- Average Payment
+- Active Customers
+- Approved Loans
+- Top Customers by Loan Amount
 
-The project intentionally preserves raw inconsistencies at the staging layer while enforcing cleaner dimensional relationships in the Data Warehouse model.
+---
+
+# Power BI Dashboard
+
+The project includes an executive Power BI dashboard with:
+
+- KPI cards
+- Portfolio analysis by city
+- Payment method analysis
+- Loan status analysis
+- Top customer analysis
+- Interactive slicers
+
+---
+
+# Power BI Semantic Model
+
+The semantic layer includes:
+
+- Star schema relationships
+- Business measures
+- Analytical filtering strategy
+- Fact and dimension modeling
 
 ---
 
@@ -201,6 +266,8 @@ The project intentionally preserves raw inconsistencies at the staging layer whi
 python -m venv venv
 ```
 
+---
+
 ## 2. Activate virtual environment
 
 ### Windows
@@ -209,17 +276,23 @@ python -m venv venv
 .\venv\Scripts\Activate.ps1
 ```
 
+---
+
 ## 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
+---
+
 ## 4. Start PostgreSQL container
 
 ```bash
 docker compose up -d
 ```
+
+---
 
 ## 5. Execute ETL pipeline
 
@@ -229,38 +302,42 @@ python -m src.main
 
 ---
 
+# Database Configuration
+
+## PostgreSQL
+
+- Host: localhost
+- Port: 5432
+- Database: postgres
+
+---
+
 # Current Features
 
-- Dockerized PostgreSQL environment
 - Modular ETL pipeline
+- Dockerized PostgreSQL environment
 - Staging layer implementation
 - Star schema implementation
+- Data quality validation
 - Analytical SQL layer
-- Data quality validations
+- Power BI dashboard
+- Semantic modeling
+- Documentation layer
 - Git version control
 
 ---
 
-# Future Improvements
+# Dashboard Preview
 
-Potential enhancements include:
+## Executive Dashboard
 
-- Airflow orchestration
-- Incremental data loads
-- Logging framework
-- Unit testing
-- CI/CD integration
-- Cloud migration architecture
+![Dashboard](docs/images/dashboard.png)
 
 ---
 
-# Evidence
+# Data Model
 
-Project execution screenshots and supporting documentation are stored in:
-
-```bash
-docs/screenshots/
-```
+![Data Model](docs/images/data_model.png)
 
 ---
 
