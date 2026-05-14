@@ -15,29 +15,33 @@ The project includes:
 - Power BI dashboard
 - Dockerized local environment
 
+---
 
 # Architecture
 
 CSV Files  
-↓
+↓  
 Python ETL Pipeline  
-↓
+↓  
 PostgreSQL Staging  
-↓
+↓  
 Data Warehouse  
-↓
+↓  
 SQL Analytics & Power BI Dashboard
 
+---
 
 # Architecture Diagram
 
-docs/architecture.png
+![Architecture](docs/architecture.png)
 
+---
 
 # Star Schema
 
-docs/star_schema.png
+![Star Schema](docs/star_schema.png)
 
+---
 
 # Tech Stack
 
@@ -50,9 +54,11 @@ docs/star_schema.png
 - DBeaver
 - Git & GitHub
 
+---
 
 # Project Structure
 
+```bash
 data-engineer/
 │
 ├── data/
@@ -62,12 +68,14 @@ data-engineer/
 │   ├── images/
 │   ├── powerbi/
 │   │   ├── Dashboard.pbix
-│   │   └── data_model.png    
+│   │   └── data_model.png
+│   │
 │   ├── screenshots/
 │   │   ├── Database Schemas.jpg
-│   │   ├── Docket Postgres Running.jpg
+│   │   ├── Docker Postgres Running.jpg
 │   │   ├── Full Project.jpg
 │   │   └── View Running.jpg
+│   │
 │   ├── architecture.png
 │   ├── data_dictionary.md
 │   ├── kpis.md
@@ -92,7 +100,9 @@ data-engineer/
 ├── docker-compose.yml
 ├── requirements.txt
 └── README.md
+```
 
+---
 
 # Data Sources
 
@@ -104,6 +114,7 @@ The project works with three datasets:
 
 CSV files are stored inside the `data/raw` folder.
 
+---
 
 # ETL Process
 
@@ -125,6 +136,7 @@ Some basic validations and transformations were applied:
 
 The cleaned data is loaded into PostgreSQL staging tables.
 
+---
 
 # Staging Layer
 
@@ -137,6 +149,7 @@ The staging schema contains:
 
 This layer helps separate raw ingestion from the analytical model.
 
+---
 
 # Data Warehouse
 
@@ -152,6 +165,7 @@ A simple star schema model was created to support reporting in Power BI.
 - fact_creditos
 - fact_pagos
 
+---
 
 # Data Quality Checks
 
@@ -165,6 +179,7 @@ Some validation queries were added to identify:
 
 A few invalid records were intentionally kept from the source files to validate the checks.
 
+---
 
 # Analytical Views
 
@@ -178,6 +193,7 @@ The following SQL views were created:
 - vw_creditos_aprobados
 - vw_promedio_pagos
 
+---
 
 # Business Queries
 
@@ -188,6 +204,7 @@ Some exploratory business queries were added, including:
 - Payment analysis by method
 - Approved loan analysis
 
+---
 
 # Power BI Dashboard
 
@@ -200,6 +217,7 @@ A Power BI dashboard was created with:
 - Top customers
 - Interactive filters
 
+---
 
 # Challenges Found
 
@@ -212,29 +230,41 @@ During development some issues were identified in the source data and modeling p
 
 These cases were reviewed using validation queries and adjustments in the data model.
 
+---
 
 # How to Run
 
 ## 1. Create virtual environment
 
+```bash
 python -m venv venv
+```
 
 ## 2. Activate environment (Windows)
 
+```bash
 .\venv\Scripts\Activate.ps1
+```
 
 ## 3. Install dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
 ## 4. Start PostgreSQL container
 
+```bash
 docker compose up -d
+```
 
 ## 5. Execute ETL pipeline
 
+```bash
 python -m src.main
+```
 
+---
 
 # Database Configuration
 
@@ -242,18 +272,21 @@ python -m src.main
 - Port: 5432
 - Database: postgres
 
+---
 
 # Dashboard Preview
 
 ## Power BI Dashboard
 
-docs/powerbi/dashboard.pbix
+[Download Power BI Dashboard](docs/powerbi/Dashboard.pbix)
 
+---
 
 # Power BI Data Model
 
-docs/powerbi/data_model.png
+![Data Model](docs/powerbi/data_model.png)
 
+---
 
 # Author
 
