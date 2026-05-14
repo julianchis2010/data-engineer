@@ -2,50 +2,42 @@
 
 ## Overview
 
-This project implements an end-to-end Data Engineering solution for processing financial data related to customers, loans, and payments.
+The main goal of this project is to process customer, loan, and payment data using a simple ETL pipeline and build a small analytical environment for reporting and visualization.
 
-The solution includes:
+The project includes:
 
-- CSV ingestion
-- Data quality validation
-- ETL pipeline in Python
+- CSV ingestion using Python
+- Basic data cleaning and validation
 - PostgreSQL staging layer
-- Dimensional Data Warehouse
+- Dimensional data warehouse model
 - Analytical SQL views
-- Business KPI documentation
-- Power BI semantic model
-- Interactive dashboard visualization
+- Business queries
+- Power BI dashboard
 - Dockerized local environment
 
----
 
 # Architecture
 
 CSV Files  
-↓  
+↓
 Python ETL Pipeline  
-↓  
-PostgreSQL Staging Layer  
-↓  
-Dimensional Data Warehouse  
-↓  
-Analytical Views & Queries  
-↓  
-Power BI Dashboard
+↓
+PostgreSQL Staging  
+↓
+Data Warehouse  
+↓
+SQL Analytics & Power BI Dashboard
 
----
 
-# Solution Architecture Diagram
+# Architecture Diagram
 
-![Architecture](docs/images/architecture.png)
+docs/architecture.png
 
----
 
-# Star Schema Model
+# Star Schema
 
-![Star Schema](docs/images/star_schema.png)
+docs/star_schema.png
 
----
 
 # Tech Stack
 
@@ -58,11 +50,9 @@ Power BI Dashboard
 - DBeaver
 - Git & GitHub
 
----
 
 # Project Structure
 
-```bash
 data-engineer/
 │
 ├── data/
@@ -70,17 +60,18 @@ data-engineer/
 │
 ├── docs/
 │   ├── images/
-│   │   ├── architecture.png
-│   │   ├── star_schema.png
-│   │   ├── dashboard.png
-│   │   └── data_model.png
-│   │
 │   ├── powerbi/
-│   │   └── dashboard.pbix
-│   │
+│   │   ├── Dashboard.pbix
+│   │   └── data_model.png    
+│   ├── screenshots/
+│   │   ├── Database Schemas.jpg
+│   │   ├── Docket Postgres Running.jpg
+│   │   ├── Full Project.jpg
+│   │   └── View Running.jpg
+│   ├── architecture.png
 │   ├── data_dictionary.md
 │   ├── kpis.md
-│   └── powerbi_semantic_model.md
+│   └── star_schema.png
 │
 ├── sql/
 │   ├── ddl/
@@ -89,7 +80,7 @@ data-engineer/
 │   │   └── views.sql
 │   │
 │   └── analytics/
-│       ├── business_queries.sql
+│       ├── queries.sql
 │       └── data_quality_checks.sql
 │
 ├── src/
@@ -100,105 +91,84 @@ data-engineer/
 │
 ├── docker-compose.yml
 ├── requirements.txt
-├── .env
 └── README.md
-```
 
----
 
 # Data Sources
 
-The project processes three datasets:
+The project works with three datasets:
 
 - Customers
 - Loans
 - Payments
 
----
+CSV files are stored inside the `data/raw` folder.
 
-# ETL Pipeline
+
+# ETL Process
 
 ## Extract
 
-CSV files are extracted using Pandas.
-
----
+The CSV files are loaded using Pandas.
 
 ## Transform
 
-Transformation steps include:
+Some basic validations and transformations were applied:
 
 - Column normalization
-- Invalid date handling
-- Null filtering
-- Invalid value validation
-- Basic data cleaning
-
----
+- Invalid date validation
+- Null handling
+- Duplicate validation
+- Basic cleaning
 
 ## Load
 
-The cleaned datasets are loaded into PostgreSQL staging tables.
+The cleaned data is loaded into PostgreSQL staging tables.
 
----
 
 # Staging Layer
 
-The staging layer contains the following tables:
+The staging schema contains:
 
 - staging.clientes
 - staging.creditos
 - staging.pagos
 - staging.error_records
 
----
+This layer helps separate raw ingestion from the analytical model.
 
-# Data Warehouse Model
 
-The solution implements a dimensional star schema model.
+# Data Warehouse
 
----
+A simple star schema model was created to support reporting in Power BI.
 
 ## Dimensions
 
-### dim_cliente
+- dim_cliente
+- dim_producto
 
-Stores customer descriptive attributes.
+## Facts
 
-### dim_producto
+- fact_creditos
+- fact_pagos
 
-Stores product-related information.
 
----
+# Data Quality Checks
 
-## Fact Tables
+Some validation queries were added to identify:
 
-### fact_creditos
-
-Stores loan transactional metrics.
-
-### fact_pagos
-
-Stores payment transactional metrics.
-
----
-
-# Data Quality Rules
-
-The following validations were implemented:
-
-- Invalid dates detection
-- Duplicate records validation
-- Loans without customers
+- Invalid dates
+- Duplicate customers
 - Payments without loans
-- Invalid payment amounts
-- Invalid approved loan amounts
+- Loans without customers
+- Invalid amounts
 
----
+A few invalid records were intentionally kept from the source files to validate the checks.
+
 
 # Analytical Views
 
-The following analytical views were implemented:
+The following SQL views were created:
 
 - vw_cartera_total
 - vw_pagos_metodo
@@ -208,138 +178,82 @@ The following analytical views were implemented:
 - vw_creditos_aprobados
 - vw_promedio_pagos
 
----
 
 # Business Queries
 
-The project includes analytical SQL queries such as:
+Some exploratory business queries were added, including:
 
 - Top customers by approved amount
 - Portfolio distribution by city
-- Payment status distribution
+- Payment analysis by method
 - Approved loan analysis
-- Active customer analysis
 
----
-
-# KPI Documentation
-
-Business KPIs documented include:
-
-- Total Portfolio
-- Average Payment
-- Active Customers
-- Approved Loans
-- Top Customers by Loan Amount
-
----
 
 # Power BI Dashboard
 
-The project includes an executive Power BI dashboard with:
+A Power BI dashboard was created with:
 
 - KPI cards
-- Portfolio analysis by city
-- Payment method analysis
+- Loan analysis by city
+- Payment method distribution
 - Loan status analysis
-- Top customer analysis
-- Interactive slicers
+- Top customers
+- Interactive filters
 
----
 
-# Power BI Semantic Model
+# Challenges Found
 
-The semantic layer includes:
+During development some issues were identified in the source data and modeling process:
 
-- Star schema relationships
-- Business measures
-- Analytical filtering strategy
-- Fact and dimension modeling
+- Invalid payment dates
+- Duplicate records
+- Missing relationships between some payments and loans
+- Ambiguous relationships between fact tables in Power BI
 
----
+These cases were reviewed using validation queries and adjustments in the data model.
+
 
 # How to Run
 
 ## 1. Create virtual environment
 
-```bash
 python -m venv venv
-```
 
----
+## 2. Activate environment (Windows)
 
-## 2. Activate virtual environment
-
-### Windows
-
-```bash
 .\venv\Scripts\Activate.ps1
-```
-
----
 
 ## 3. Install dependencies
 
-```bash
 pip install -r requirements.txt
-```
-
----
 
 ## 4. Start PostgreSQL container
 
-```bash
 docker compose up -d
-```
-
----
 
 ## 5. Execute ETL pipeline
 
-```bash
 python -m src.main
-```
 
----
 
 # Database Configuration
-
-## PostgreSQL
 
 - Host: localhost
 - Port: 5432
 - Database: postgres
 
----
-
-# Current Features
-
-- Modular ETL pipeline
-- Dockerized PostgreSQL environment
-- Staging layer implementation
-- Star schema implementation
-- Data quality validation
-- Analytical SQL layer
-- Power BI dashboard
-- Semantic modeling
-- Documentation layer
-- Git version control
-
----
 
 # Dashboard Preview
 
-## Executive Dashboard
+## Power BI Dashboard
 
-![Dashboard](docs/images/dashboard.png)
+docs/powerbi/dashboard.pbix
 
----
 
-# Data Model
+# Power BI Data Model
 
-![Data Model](docs/images/data_model.png)
+docs/powerbi/data_model.png
 
----
 
 # Author
 

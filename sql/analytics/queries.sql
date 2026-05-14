@@ -1,3 +1,4 @@
+-- Top customers by approved amount
 SELECT
     d.nombres,
     d.apellidos,

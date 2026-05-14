@@ -1,5 +1,4 @@
--- DUPLICADOS CLIENTES
-
+-- Check duplicated customers
 SELECT
     cliente_id,
     COUNT(*)
@@ -8,8 +7,7 @@ GROUP BY cliente_id
 HAVING COUNT(*) > 1;
 
 
--- CREDITOS SIN CLIENTE
-
+-- Check loans without clients
 SELECT c.*
 FROM staging.creditos c
 LEFT JOIN staging.clientes cl
@@ -17,8 +15,7 @@ ON c.cliente_id = cl.cliente_id
 WHERE cl.cliente_id IS NULL;
 
 
--- PAGOS SIN CREDITO
-
+-- Check payments without loan
 SELECT p.*
 FROM staging.pagos p
 LEFT JOIN staging.creditos c
@@ -26,22 +23,19 @@ ON p.credito_id = c.credito_id
 WHERE c.credito_id IS NULL;
 
 
--- FECHAS INVALIDAS
-
+-- Check invalid dates
 SELECT *
 FROM staging.pagos
 WHERE fecha_pago IS NULL;
 
 
--- CREDITOS CON MONTO INVALIDO
-
+-- Check loans with invalid amounts
 SELECT *
 FROM staging.creditos
 WHERE monto_aprobado <= 0;
 
 
--- PAGOS CON MONTO INVALIDO
-
+-- Check payments with invalid amounts
 SELECT *
 FROM staging.pagos
 WHERE monto_pago <= 0;
